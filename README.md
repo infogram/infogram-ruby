@@ -1,6 +1,6 @@
 # Infogram::Ruby
 
-TODO: Write a gem description
+Ruby library for Infogr.am
 
 ## Installation
 
@@ -19,8 +19,32 @@ Or install it yourself as:
     $ gem install infogram-ruby
 
 ## Usage
+```ruby
+infogram = Infogram.new('API_KEY', 'API_SECRET')
+client.get_themes
+```
+## Example response
+```json
+[
+  {
+    "id": 61,
+    "title": "twitter",
+    "thumb": "https://infogr.am/i/templates/61/twitter-thumbnail-small.png"
+  },
+  {
+    "id": 44,
+    "title": "Megaphone",
+    "thumb": "https://infogr.am/i/templates/S/PRO-megaphone.png"
+  },
+  {
+    "id": 34,
+    "title": "Asketic-new",
+    "thumb": "https://infogr.am/i/templates/S/asketic-black.png"
+  }
+]
+```
 
-TODO: Write usage instructions here
+## API Methods
 
 ## Contributing
 

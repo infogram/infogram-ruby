@@ -1,4 +1,15 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in infogram-ruby.gemspec
+group :development do
+  gem 'pry'
+  gem 'pry-stack_explorer'
+  gem 'redcarpet'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'guard-rspec'
+  gem 'webmock'
+end
+
 gemspec

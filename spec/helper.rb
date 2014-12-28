@@ -1,4 +1,4 @@
-require 'infogram'
+require 'infogram-ruby'
 require 'rspec'
 require 'webmock/rspec'
 

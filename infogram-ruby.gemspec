@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name          = 'infogram-ruby'
-  s.version       = '0.0.3'
+  s.version       = '0.0.5'
   s.authors       = ['Maksim Berjoza']
   s.email         = ['torbjon@gmail.com']
   s.summary       = %q{Infogr.am Ruby SDK}
   s.description   = %q{Ruby library for Infogr.am}
-  s.homepage      = ''
+  s.homepage      = 'https://github.com/infogram/infogram-ruby'
   s.license       = 'MIT'
 
   s.files         = `git ls-files -z`.split("\x0")

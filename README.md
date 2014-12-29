@@ -4,25 +4,16 @@ Ruby library for Infogr.am
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'infogram-ruby'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install infogram-ruby
 
 ## Usage
 ```ruby
+require 'infogram-ruby'
+
 infogram = Infogram.new('API_KEY', 'API_SECRET')
-client.get_themes
+infogram.get_themes
 ```
+
 ## Example response
 ```json
 [

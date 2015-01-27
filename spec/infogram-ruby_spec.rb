@@ -18,7 +18,7 @@ describe 'Infogram' do
   }
 
   context 'Signature' do
-    let (:encoded_params) { 'api_key=nMECGhmHe9&content=%5B%7B%22type%22%3A%22h1%22%2C%22text%22%3A%22Hello%20infogr.am%22%7D%5D&publish=false&theme_id=45&title=Hello' }
+    let (:encoded_params) { 'api_key=nMECGhmHe9&content=%5B%7B%3Atype%3D%3E%22h1%22%2C%20%3Atext%3D%3E%22Hello%20infogr.am%22%7D%5D&publish=false&theme_id=45&title=Hello' }
 
     it 'should encode params' do
       params[:api_key] = api_key
@@ -28,7 +28,7 @@ describe 'Infogram' do
     it 'should generate signature' do
       params[:api_key] = api_key
       signature = client.signature('post', 'infographics', params)
-      expect(signature).to eq('bqwCqAk1TWDYNy3eqV0BiNuIERQ=')
+      expect(signature).to eq('FqGHS3wWJQQn7yxrwhLP5qCxhjQ=')
     end
   end
 

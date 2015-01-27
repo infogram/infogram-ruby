@@ -15,7 +15,7 @@ class Infogram
 
   def decode_params(params)
     params.keys.sort.map{ |k|
-      value = (k.to_s == 'content') ? url_escaping(params[k].to_json) : params[k]
+      value = url_escaping(params[k].to_s)
       "#{k}=#{value}"
     }.join('&')
   end
@@ -52,8 +52,8 @@ class Infogram
 
   def create_infographic(opts={})
     opts[:api_key] = @api_key
-    opts[:api_sig] = signature('POST', 'infographics', opts)
     opts[:content] = opts[:content].to_json
+    opts[:api_sig] = signature('POST', 'infographics', opts)
     HTTParty.post("#{@api_url}/infographics", body: opts)
   end
 end

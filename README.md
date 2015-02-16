@@ -38,17 +38,17 @@ infogram.themes.list
 ## API Methods
 
 ### Themes
-  `client.themes.list`
+    client.themes.list
 
-### Infograraphics
-  `client.infographics.list`
-  `client.infographics.get(infographic_id)`
-  `client.infographics.create(params)`
-  `client.infographics.update(infographic_id, params)`
-  `client.infographics.destroy(infographic_id)`
+### Infographics
+    client.infographics.list
+    client.infographics.get(infographic_id)
+    client.infographics.create(params)
+    client.infographics.update(infographic_id, params)
+    client.infographics.destroy(infographic_id)
 
 ### Users
-  `client.users.list.get_infographics(user_id)`
+    client.users.get_infographics(user_id)
 
 ## Contributing
 

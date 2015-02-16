@@ -4,14 +4,14 @@ Ruby library for Infogr.am
 
 ## Installation
 
-    $ gem install infogram-ruby
+    $ gem install infogram
 
 ## Usage
 ```ruby
-require 'infogram-ruby'
+require 'infogram'
 
-infogram = Infogram.new('API_KEY', 'API_SECRET')
-infogram.get_themes
+client = Infogram.new('API_KEY', 'API_SECRET')
+infogram.themes.list
 ```
 
 ## Example response
@@ -36,6 +36,19 @@ infogram.get_themes
 ```
 
 ## API Methods
+
+### Themes
+  `client.themes.list`
+
+### Infograraphics
+  `client.infographics.list`
+  `client.infographics.get(infographic_id)`
+  `client.infographics.create(params)`
+  `client.infographics.update(infographic_id, params)`
+  `client.infographics.destroy(infographic_id)`
+
+### Users
+  `client.users.list.get_infographics(user_id)`
 
 ## Contributing
 

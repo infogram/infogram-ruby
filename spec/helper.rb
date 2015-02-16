@@ -1,4 +1,4 @@
-require 'infogram-ruby'
+require 'infogram'
 require 'rspec'
 require 'webmock/rspec'
 
@@ -11,7 +11,7 @@ RSpec.configure do |config|
 end
 
 def infogram_client(key, secret)
-  Infogram.new(key, secret)
+  Infogram::Client.new(key, secret)
 end
 
 def fixture(file)
@@ -19,13 +19,16 @@ def fixture(file)
 end
 
 def with_fixture(file)
-  { body: fixture(file), headers: { content_type: 'application/json; charset=utf-8' } }
+  {
+    body: fixture(file),
+    headers: { content_type: 'application/json; charset=utf-8' }
+  }
 end
 
 def stub_get(path)
-  stub_request(:get, /.*#{Infogram::API_URL + '/' + path}*/)
+  stub_request(:get, /.*#{Infogram::Client::API_URL + '/' + path}*/)
 end
 
 def stub_post(path)
-  stub_request(:post, /.*#{Infogram::API_URL + '/' + path}*/)
+  stub_request(:post, /.*#{Infogram::Client::API_URL + '/' + path}*/)
 end

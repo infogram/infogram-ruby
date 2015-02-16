@@ -1,19 +1,18 @@
-# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'infogram/version'
 
 Gem::Specification.new do |s|
-  s.name          = 'infogram-ruby'
-  s.version       = '0.0.5'
+  s.name          = 'infogram'
+  s.version       = Infogram::VERSION
   s.authors       = ['Maksim Berjoza']
   s.email         = ['torbjon@gmail.com']
-  s.summary       = %q{Infogr.am Ruby SDK}
-  s.description   = %q{Ruby library for Infogr.am}
+  s.summary       = 'Infogr.am Ruby SDK'
+  s.description   = 'Ruby library for Infogr.am'
   s.homepage      = 'https://github.com/infogram/infogram-ruby'
   s.license       = 'MIT'
 
-  s.files         = `git ls-files -z`.split("\x0")
-  s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  s.files         = `git ls-files -x Gemfile.lock`.split("\n") rescue ''
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ['lib']
 

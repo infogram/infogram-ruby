@@ -10,7 +10,7 @@ Ruby library for Infogr.am
 ```ruby
 require 'infogram'
 
-client = Infogram.new('API_KEY', 'API_SECRET')
+client = Infogram::Client.new('API_KEY', 'API_SECRET')
 infogram.themes.list
 ```
 

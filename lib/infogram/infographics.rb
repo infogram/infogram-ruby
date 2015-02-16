@@ -18,15 +18,15 @@ module Infogram
 
     def create(opts = {})
       opts[:api_key] = @config[:api_key]
-      opts[:api_sig] = signature('POST', 'infographics', opts, @config)
       opts[:content] = opts[:content].to_json
+      opts[:api_sig] = signature('POST', 'infographics', opts, @config)
       HTTParty.post("#{@config[:api_url]}/infographics", body: opts)
     end
 
     def update(id, opts = {})
       opts[:api_key] = @config[:api_key]
-      opts[:api_sig] = signature('PUT', "infographics/#{id}", opts, @config)
       opts[:content] = opts[:content].to_json
+      opts[:api_sig] = signature('PUT', "infographics/#{id}", opts, @config)
       HTTParty.put("#{@config[:api_url]}/infographics/#{id}", body: opts)
     end
 

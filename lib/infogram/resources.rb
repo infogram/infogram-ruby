@@ -1,11 +1,11 @@
 module Infogram
   class Resources
-    def decode_params(params)
-      params.keys.sort.map { |k| "#{k}=#{url_escaping(params[k].to_s)}" }.join('&')
-    end
-
     def url_escaping(string)
       CGI.escape(string).gsub('+', '%20')
+    end
+
+    def decode_params(params)
+      params.keys.sort.map { |k| "#{k.to_s}=#{url_escaping(params[k].to_s)}" }.join('&')
     end
 
     def signature(method, path, params, config)

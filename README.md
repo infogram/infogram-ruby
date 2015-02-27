@@ -11,7 +11,7 @@ Ruby library for Infogr.am
 require 'infogram'
 
 client = Infogram::Client.new('API_KEY', 'API_SECRET')
-infogram.themes.list
+client.themes.list
 ```
 
 ## Example response

@@ -1,5 +1,7 @@
 # Infogram::Ruby
 
+Utilisé sur HmdPrivate
+
 Ruby library for Infogr.am
 
 ## Installation
